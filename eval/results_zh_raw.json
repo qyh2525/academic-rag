@@ -1,0 +1,38 @@
+{
+  "vector": {
+    "metrics": {
+      "n": 20,
+      "recall@4": 1.0,
+      "recall@20": 1.0,
+      "mrr": 0.9416666666666668
+    },
+    "time_s": 17.8
+  },
+  "bm25": {
+    "metrics": {
+      "n": 20,
+      "recall@4": 0.25,
+      "recall@20": 0.25,
+      "mrr": 0.25
+    },
+    "time_s": 0.6
+  },
+  "hybrid": {
+    "metrics": {
+      "n": 20,
+      "recall@4": 1.0,
+      "recall@20": 1.0,
+      "mrr": 0.8666666666666668
+    },
+    "time_s": 4.7
+  },
+  "hybrid_rerank": {
+    "metrics": {
+      "n": 20,
+      "recall@4": 1.0,
+      "recall@20": 1.0,
+      "mrr": 0.9666666666666666
+    },
+    "time_s": 208.8
+  }
+}

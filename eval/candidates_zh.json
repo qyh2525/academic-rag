@@ -1,0 +1,542 @@
+[
+  {
+    "question": "在MS MARCO段落检索任务中，该BERT重排序系统相比之前的最先进技术，其MRR@10相对提升了多少？",
+    "type": "factual",
+    "answer_hint": "相对提升27%",
+    "expected_sources": [
+      "1901.04085v5.pdf"
+    ],
+    "source_paper": "1901.04085v5.pdf"
+  },
+  {
+    "question": "该论文是如何描述其使用BERT进行段落重排序的方法的？",
+    "type": "method",
+    "answer_hint": "简单重新实现BERT用于基于查询的段落重排序",
+    "expected_sources": [
+      "1901.04085v5.pdf"
+    ],
+    "source_paper": "1901.04085v5.pdf"
+  },
+  {
+    "question": "REALM模型在语言模型预训练中额外引入了哪个关键组件？",
+    "type": "factual",
+    "answer_hint": "一个隐式知识检索器，用于从大型语料库（如维基百科）中检索文档",
+    "expected_sources": [
+      "2002.08909v1.pdf"
+    ],
+    "source_paper": "2002.08909v1.pdf"
+  },
+  {
+    "question": "REALM是如何在没有监督信号的情况下训练知识检索器的？",
+    "type": "method",
+    "answer_hint": "利用掩码语言建模作为学习信号，并通过检索步骤反向传播梯度，同时考虑数百万候选文档",
+    "expected_sources": [
+      "2002.08909v1.pdf"
+    ],
+    "source_paper": "2002.08909v1.pdf"
+  },
+  {
+    "question": "ColBERT模型采用的核心排名架构是什么？",
+    "type": "factual",
+    "answer_hint": "晚期交互（Late Interaction）架构",
+    "expected_sources": [
+      "2004.12832v2.pdf"
+    ],
+    "source_paper": "2004.12832v2.pdf"
+  },
+  {
+    "question": "ColBERT是如何通过延迟交互机制实现高效查询处理的？",
+    "type": "method",
+    "answer_hint": "独立编码查询和文档，延迟交互步骤，允许离线预计算文档表示，从而加速查询",
+    "expected_sources": [
+      "2004.12832v2.pdf"
+    ],
+    "source_paper": "2004.12832v2.pdf"
+  },
+  {
+    "question": "KILT基准中所有任务都基于哪个统一的知识源？",
+    "type": "factual",
+    "answer_hint": "所有任务基于同一Wikipedia快照",
+    "expected_sources": [
+      "2009.02252v4.pdf"
+    ],
+    "source_paper": "2009.02252v4.pdf"
+  },
+  {
+    "question": "KILT中哪种通用模型在多项任务中表现出强基线性能？",
+    "type": "method",
+    "answer_hint": "共享密集向量索引结合seq2seq模型",
+    "expected_sources": [
+      "2009.02252v4.pdf"
+    ],
+    "source_paper": "2009.02252v4.pdf"
+  },
+  {
+    "question": "BEIR基准中总共包含了多少个来自不同文本检索任务和领域的数据集？",
+    "type": "factual",
+    "answer_hint": "18个公开数据集",
+    "expected_sources": [
+      "2104.08663v4.pdf"
+    ],
+    "source_paper": "2104.08663v4.pdf"
+  },
+  {
+    "question": "在BEIR基准的零样本评估中，重排序和延迟交互模型相比密集/稀疏检索模型在性能和计算成本上呈现怎样的权衡？",
+    "type": "method",
+    "answer_hint": "重排序和延迟交互模型平均零样本性能最好但计算成本高；密集/稀疏检索模型计算高效但性能通常较低",
+    "expected_sources": [
+      "2104.08663v4.pdf"
+    ],
+    "source_paper": "2104.08663v4.pdf"
+  },
+  {
+    "question": "晚交互模型（如 ColBERT）在表示查询和文档时采用什么粒度的表示方式？",
+    "type": "factual",
+    "answer_hint": "在每个 token 粒度上生成多向量表示，将相关性建模分解为 token 级别的计算。",
+    "expected_sources": [
+      "2112.01488v3.pdf"
+    ],
+    "source_paper": "2112.01488v3.pdf"
+  },
+  {
+    "question": "ColBERTv2 通过哪两种策略同时提升了检索质量和减小了空间占用？",
+    "type": "method",
+    "answer_hint": "采用激进的残差压缩机制和去噪监督策略。",
+    "expected_sources": [
+      "2112.01488v3.pdf"
+    ],
+    "source_paper": "2112.01488v3.pdf"
+  },
+  {
+    "question": "根据论文，无监督稠密检索模型在BEIR基准的Recall@100指标上，与BM25相比表现如何？",
+    "type": "factual",
+    "answer_hint": "在15个数据集中的11个上优于BM25",
+    "expected_sources": [
+      "2112.09118v4.pdf"
+    ],
+    "source_paper": "2112.09118v4.pdf"
+  },
+  {
+    "question": "论文中提出的无监督模型是如何实现跨语言检索的，例如从阿拉伯语查询检索英语文档？",
+    "type": "method",
+    "answer_hint": "通过对比学习进行无监督预训练，然后在有监督英语数据上微调，从而迁移到低资源语言并支持不同脚本间的检索",
+    "expected_sources": [
+      "2112.09118v4.pdf"
+    ],
+    "source_paper": "2112.09118v4.pdf"
+  },
+  {
+    "question": "在封闭且专业的目标领域（如COVID-19）上，Dense Passage Retriever（DPR）的表现与标准BM25相比如何？",
+    "type": "factual",
+    "answer_hint": "DPR落后于标准BM25",
+    "expected_sources": [
+      "2204.09248v1.pdf"
+    ],
+    "source_paper": "2204.09248v1.pdf"
+  },
+  {
+    "question": "研究者采用什么方法来增强DPR在领域迁移下的鲁棒性？",
+    "type": "method",
+    "answer_hint": "利用文本到文本生成器从无标注目标领域文本生成合成训练样例，并用这些样例微调DPR",
+    "expected_sources": [
+      "2204.09248v1.pdf"
+    ],
+    "source_paper": "2204.09248v1.pdf"
+  },
+  {
+    "question": "Atlas 模型在少样本设置下主要解决哪类任务？",
+    "type": "factual",
+    "answer_hint": "知识密集型任务，如问答和事实核查",
+    "expected_sources": [
+      "2208.03299v3.pdf"
+    ],
+    "source_paper": "2208.03299v3.pdf"
+  },
+  {
+    "question": "Atlas 模型如何在少样本场景下有效学习知识密集型任务？",
+    "type": "method",
+    "answer_hint": "通过精心设计和预训练的检索增强语言模型，利用文档索引内容并易于更新",
+    "expected_sources": [
+      "2208.03299v3.pdf"
+    ],
+    "source_paper": "2208.03299v3.pdf"
+  },
+  {
+    "question": "MTEB 基准测试覆盖了多少个嵌入任务、数据集和语言？",
+    "type": "factual",
+    "answer_hint": "8个嵌入任务，总共58个数据集和112种语言",
+    "expected_sources": [
+      "2210.07316v3.pdf"
+    ],
+    "source_paper": "2210.07316v3.pdf"
+  },
+  {
+    "question": "MTEB 是如何揭示出当前没有一种文本嵌入方法在所有任务上表现最优的？",
+    "type": "method",
+    "answer_hint": "通过对33个模型在MTEB上进行全面评估，发现没有单一方法在所有任务上占优",
+    "expected_sources": [
+      "2210.07316v3.pdf"
+    ],
+    "source_paper": "2210.07316v3.pdf"
+  },
+  {
+    "question": "E5模型在训练时使用了哪个大规模文本对数据集？",
+    "type": "factual",
+    "answer_hint": "CCPairs（从网络收集的弱监督文本对数据集）",
+    "expected_sources": [
+      "2212.03533v2.pdf"
+    ],
+    "source_paper": "2212.03533v2.pdf"
+  },
+  {
+    "question": "E5模型采用什么训练方法来获得文本嵌入？",
+    "type": "method",
+    "answer_hint": "对比学习，使用弱监督信号训练",
+    "expected_sources": [
+      "2212.03533v2.pdf"
+    ],
+    "source_paper": "2212.03533v2.pdf"
+  },
+  {
+    "question": "HyDE方法包含哪两个核心步骤？",
+    "type": "factual",
+    "answer_hint": "第一步用指令跟随语言模型生成假设文档，第二步用无监督对比学习编码器编码文档为嵌入向量并检索相似真实文档。",
+    "expected_sources": [
+      "2212.10496v1.pdf"
+    ],
+    "source_paper": "2212.10496v1.pdf"
+  },
+  {
+    "question": "HyDE如何利用假设文档实现零样本密集检索？",
+    "type": "method",
+    "answer_hint": "先通过语言模型生成捕捉相关性模式的假设文档，再用对比学习编码器将其映射为嵌入向量，在语料库中基于向量相似度检索真实文档，同时编码器的密集瓶颈过滤掉生成文档中的错误细节。",
+    "expected_sources": [
+      "2212.10496v1.pdf"
+    ],
+    "source_paper": "2212.10496v1.pdf"
+  },
+  {
+    "question": "在 REPLUG 框架中，检索到的文档是如何被整合到语言模型输入中的？",
+    "type": "factual",
+    "answer_hint": "将检索到的文档直接前置（prepend）到原始输入之前，喂给冻结的黑盒语言模型。",
+    "expected_sources": [
+      "2301.12652v4.pdf"
+    ],
+    "source_paper": "2301.12652v4.pdf"
+  },
+  {
+    "question": "REPLUG 如何利用语言模型来改进检索模型的性能？",
+    "type": "method",
+    "answer_hint": "使用语言模型作为监督信号来训练检索模型，使其能检索到更有助于语言模型预测的文档。",
+    "expected_sources": [
+      "2301.12652v4.pdf"
+    ],
+    "source_paper": "2301.12652v4.pdf"
+  },
+  {
+    "question": "根据这篇综述，用于增强生成模型的多模态知识的格式包括哪些？",
+    "type": "factual",
+    "answer_hint": "图像、代码、表格、图形和音频",
+    "expected_sources": [
+      "2303.10868v3.pdf"
+    ],
+    "source_paper": "2303.10868v3.pdf"
+  },
+  {
+    "question": "通过检索多模态知识来增强生成模型的方法，主要致力于解决生成模型的哪些关键问题？",
+    "type": "method",
+    "answer_hint": "事实性、推理、可解释性和鲁棒性",
+    "expected_sources": [
+      "2303.10868v3.pdf"
+    ],
+    "source_paper": "2303.10868v3.pdf"
+  },
+  {
+    "question": "论文中构建的 NovelEval 测试集的主要用途是什么？",
+    "type": "factual",
+    "answer_hint": "验证模型对未知知识的排序能力",
+    "expected_sources": [
+      "2304.09542v3.pdf"
+    ],
+    "source_paper": "2304.09542v3.pdf"
+  },
+  {
+    "question": "论文采用什么方案将 ChatGPT 的排序能力迁移到小型专用模型？",
+    "type": "method",
+    "answer_hint": "排列蒸馏方案（permutation distillation scheme）",
+    "expected_sources": [
+      "2304.09542v3.pdf"
+    ],
+    "source_paper": "2304.09542v3.pdf"
+  },
+  {
+    "question": "在FLARE方法中，用于检索外部文档的查询是什么？",
+    "type": "factual",
+    "answer_hint": "对即将到来的句子的预测（即预测的下一个句子）作为查询。",
+    "expected_sources": [
+      "2305.06983v2.pdf"
+    ],
+    "source_paper": "2305.06983v2.pdf"
+  },
+  {
+    "question": "FLARE方法是如何在生成长文本时主动决定检索时机与内容的？",
+    "type": "method",
+    "answer_hint": "迭代使用对即将到来的句子的预测作为查询来检索相关文档，若当前句子包含低置信度token，则用检索到的文档重新生成该句子。",
+    "expected_sources": [
+      "2305.06983v2.pdf"
+    ],
+    "source_paper": "2305.06983v2.pdf"
+  },
+  {
+    "question": "研究发现语言模型在长上下文输入中，性能表现与相关信息位置呈现何种关系？",
+    "type": "factual",
+    "answer_hint": "相关信息位于开头或结尾时性能最高，位于中间时性能显著下降。",
+    "expected_sources": [
+      "2307.03172v3.pdf"
+    ],
+    "source_paper": "2307.03172v3.pdf"
+  },
+  {
+    "question": "论文使用了哪两种任务来评估语言模型对长上下文中相关信息的利用能力？",
+    "type": "method",
+    "answer_hint": "多文档问答和键值检索。",
+    "expected_sources": [
+      "2307.03172v3.pdf"
+    ],
+    "source_paper": "2307.03172v3.pdf"
+  },
+  {
+    "question": "C-Pack 包含哪三个核心组成部分？",
+    "type": "factual",
+    "answer_hint": "C-MTP 训练数据集、C-MTEB 综合基准测试、BGE 嵌入模型家族",
+    "expected_sources": [
+      "2309.07597v5.pdf"
+    ],
+    "source_paper": "2309.07597v5.pdf"
+  },
+  {
+    "question": "C-MTP 训练数据集是如何构建的？",
+    "type": "method",
+    "answer_hint": "基于大规模未标注语料库的整理和高质量标注语料库的整合",
+    "expected_sources": [
+      "2309.07597v5.pdf"
+    ],
+    "source_paper": "2309.07597v5.pdf"
+  },
+  {
+    "question": "根据论文介绍，Ragas框架可以评估RAG管道的哪几个不同维度？",
+    "type": "factual",
+    "answer_hint": "检索系统识别相关和聚焦上下文段落的能力、LLM忠实利用这些段落的能力、以及生成本身的质量。",
+    "expected_sources": [
+      "2309.15217v2.pdf"
+    ],
+    "source_paper": "2309.15217v2.pdf"
+  },
+  {
+    "question": "Ragas框架是如何在不依赖人工标注的情况下评估RAG管道的？",
+    "type": "method",
+    "answer_hint": "它提出了一套度量标准（a suite of metrics），用于评估不同维度而无需人工标注。",
+    "expected_sources": [
+      "2309.15217v2.pdf"
+    ],
+    "source_paper": "2309.15217v2.pdf"
+  },
+  {
+    "question": "RA-DIT 方法包含哪两个不同的微调步骤？",
+    "type": "factual",
+    "answer_hint": "第一步更新预训练语言模型以更好地利用检索到的信息；第二步更新检索器以返回更相关的结果（由语言模型偏好的）。",
+    "expected_sources": [
+      "2310.01352v4.pdf"
+    ],
+    "source_paper": "2310.01352v4.pdf"
+  },
+  {
+    "question": "RA-DIT 如何通过双指令微调来提升检索增强语言模型的性能？",
+    "type": "method",
+    "answer_hint": "通过两个独立的微调步骤：一个让语言模型更善于利用检索信息，另一个让检索器返回更相关的结果，两者结合带来额外性能提升。",
+    "expected_sources": [
+      "2310.01352v4.pdf"
+    ],
+    "source_paper": "2310.01352v4.pdf"
+  },
+  {
+    "question": "在 Self-RAG 框架中，用于使语言模型在推理阶段可控制的特殊令牌是什么？它们的主要作用是什么？",
+    "type": "factual",
+    "answer_hint": "反射令牌（reflection tokens），用于让模型在推理时根据任务需求调整行为。",
+    "expected_sources": [
+      "2310.11511v1.pdf"
+    ],
+    "source_paper": "2310.11511v1.pdf"
+  },
+  {
+    "question": "Self-RAG 框架是如何通过检索和自我反思来提升语言模型生成质量与事实性的？",
+    "type": "method",
+    "answer_hint": "训练单个语言模型自适应地按需检索，并生成反射令牌来评估检索结果和自身生成内容的质量。",
+    "expected_sources": [
+      "2310.11511v1.pdf"
+    ],
+    "source_paper": "2310.11511v1.pdf"
+  },
+  {
+    "question": "Chain-of-Note 的核心思想是什么？",
+    "type": "factual",
+    "answer_hint": "为每个检索到的文档生成连续的阅读笔记，评估其与问题的相关性，并整合信息形成最终答案。",
+    "expected_sources": [
+      "2311.09210v2.pdf"
+    ],
+    "source_paper": "2311.09210v2.pdf"
+  },
+  {
+    "question": "Chain-of-Note 如何帮助检索增强语言模型处理噪声或不相关的文档？",
+    "type": "method",
+    "answer_hint": "通过生成顺序阅读笔记来仔细评估每个文档的相关性，并在检索信息不相关时利用内在知识或回答“unknown”，从而避免误导。",
+    "expected_sources": [
+      "2311.09210v2.pdf"
+    ],
+    "source_paper": "2311.09210v2.pdf"
+  },
+  {
+    "question": "ARES 从哪三个维度评估检索增强生成系统？",
+    "type": "factual",
+    "answer_hint": "上下文相关性、答案忠实性、答案相关性",
+    "expected_sources": [
+      "2311.09476v2.pdf"
+    ],
+    "source_paper": "2311.09476v2.pdf"
+  },
+  {
+    "question": "ARES 如何利用少量人工标注数据来减轻模型预测错误？",
+    "type": "method",
+    "answer_hint": "使用预测驱动推理（PPI）",
+    "expected_sources": [
+      "2311.09476v2.pdf"
+    ],
+    "source_paper": "2311.09476v2.pdf"
+  },
+  {
+    "question": "根据论文，大型语言模型（LLMs）通过预训练获得的知识存在哪些主要局限性？",
+    "type": "factual",
+    "answer_hint": "两个局限性：知识是静态的，不随时间更新；知识是非特定的，可能缺乏特定领域的深入专业知识。",
+    "expected_sources": [
+      "2312.05934v3.pdf"
+    ],
+    "source_paper": "2312.05934v3.pdf"
+  },
+  {
+    "question": "论文是如何比较无监督微调和检索增强生成（RAG）两种方法的，并得出了什么结论？",
+    "type": "method",
+    "answer_hint": "在多种知识密集型任务上评估，发现RAG始终优于无监督微调，且LLMs难以通过无监督微调学习新事实，但多次暴露同一事实可缓解此问题。",
+    "expected_sources": [
+      "2312.05934v3.pdf"
+    ],
+    "source_paper": "2312.05934v3.pdf"
+  },
+  {
+    "question": "CRAG 中用于评估检索文档质量的组件是什么？它返回什么结果？",
+    "type": "factual",
+    "answer_hint": "一个轻量级检索评估器，返回置信度以判断检索文档的整体质量。",
+    "expected_sources": [
+      "2401.15884v3.pdf"
+    ],
+    "source_paper": "2401.15884v3.pdf"
+  },
+  {
+    "question": "CRAG 采用什么算法来处理检索到的文档，从而聚焦关键信息并过滤无关信息？",
+    "type": "method",
+    "answer_hint": "分解-重组算法，先分解文档再重组，选择性关注关键信息。",
+    "expected_sources": [
+      "2401.15884v3.pdf"
+    ],
+    "source_paper": "2401.15884v3.pdf"
+  },
+  {
+    "question": "根据 CRUD-RAG 基准，RAG 应用被划分为哪四种类型？",
+    "type": "factual",
+    "answer_hint": "Create（创建）、Read（读取）、Update（更新）、Delete（删除）四种类型",
+    "expected_sources": [
+      "2401.17043v3.pdf"
+    ],
+    "source_paper": "2401.17043v3.pdf"
+  },
+  {
+    "question": "CRUD-RAG 基准通过什么方式来更全面地评估 RAG 系统？",
+    "type": "method",
+    "answer_hint": "构建大规模基准，评估 RAG 系统的所有组件，并参考 CRUD 动作将应用场景分为四类",
+    "expected_sources": [
+      "2401.17043v3.pdf"
+    ],
+    "source_paper": "2401.17043v3.pdf"
+  },
+  {
+    "question": "RAPTOR方法中的树结构是如何构建的？",
+    "type": "factual",
+    "answer_hint": "通过递归地嵌入、聚类和总结文本块，从底部向上构建具有不同摘要级别的树。",
+    "expected_sources": [
+      "2401.18059v1.pdf"
+    ],
+    "source_paper": "2401.18059v1.pdf"
+  },
+  {
+    "question": "RAPTOR在推理阶段如何利用构建的树进行检索？",
+    "type": "method",
+    "answer_hint": "从树中检索，整合不同抽象级别的信息，跨越长文档。",
+    "expected_sources": [
+      "2401.18059v1.pdf"
+    ],
+    "source_paper": "2401.18059v1.pdf"
+  },
+  {
+    "question": "GraphRAG构建图索引的两个阶段分别是什么？",
+    "type": "factual",
+    "answer_hint": "第一阶段从源文档推导实体知识图谱，第二阶段为所有紧密相关的实体组预生成社区摘要。",
+    "expected_sources": [
+      "2404.16130v2.pdf"
+    ],
+    "source_paper": "2404.16130v2.pdf"
+  },
+  {
+    "question": "GraphRAG如何处理用户提出的全局性问题并生成最终答案？",
+    "type": "method",
+    "answer_hint": "每个社区摘要被用来生成部分响应，然后将所有部分响应汇总生成最终响应。",
+    "expected_sources": [
+      "2404.16130v2.pdf"
+    ],
+    "source_paper": "2404.16130v2.pdf"
+  },
+  {
+    "question": "LongRAG框架中，基本检索单元的大小是多少？",
+    "type": "factual",
+    "answer_hint": "将整个Wikipedia语料库处理为4000个token的单元",
+    "expected_sources": [
+      "2406.15319v3.pdf"
+    ],
+    "source_paper": "2406.15319v3.pdf"
+  },
+  {
+    "question": "LongRAG通过什么方法来减轻传统RAG中检索器的负担？",
+    "type": "method",
+    "answer_hint": "将文档分组为更长的4K token单元，使单元总数从2200万减少到60万，从而降低检索器负担",
+    "expected_sources": [
+      "2406.15319v3.pdf"
+    ],
+    "source_paper": "2406.15319v3.pdf"
+  },
+  {
+    "question": "LR-Robot 框架通过什么过程来定义子系统文献综述任务、评估模型并确保方法严谨性？",
+    "type": "factual",
+    "answer_hint": "采用人机协同（human-in-the-loop）过程",
+    "expected_sources": [
+      "2603.17723v1.pdf"
+    ],
+    "source_paper": "2603.17723v1.pdf"
+  },
+  {
+    "question": "LR-Robot 框架如何增强文献综合的事实依据和透明度？",
+    "type": "method",
+    "answer_hint": "通过结合结构化知识源和检索增强生成（RAG）技术",
+    "expected_sources": [
+      "2603.17723v1.pdf"
+    ],
+    "source_paper": "2603.17723v1.pdf"
+  }
+]

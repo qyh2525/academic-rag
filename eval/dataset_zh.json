@@ -1,0 +1,182 @@
+[
+  {
+    "id": "q01",
+    "question": "在MS MARCO段落检索任务中，该BERT重排序系统相比之前的最先进技术，其MRR@10相对提升了多少？",
+    "type": "factual",
+    "trap_type": "bm25_friendly",
+    "expected_sources": ["1901.04085v5.pdf"],
+    "answer_hint": "相对提升27%",
+    "notes": "含 'BERT' + 'MS MARCO' + 'MRR@10' 强专有名词,中英版完全对应"
+  },
+  {
+    "id": "q02",
+    "question": "REALM是如何在没有监督信号的情况下训练知识检索器的？",
+    "type": "method",
+    "trap_type": "hybrid",
+    "expected_sources": ["2002.08909v1.pdf"],
+    "answer_hint": "利用掩码语言建模作为学习信号,并通过检索步骤反向传播梯度",
+    "notes": "REALM 关键词 + 无监督训练机制需要语义理解"
+  },
+  {
+    "id": "q03",
+    "question": "ColBERT模型采用的核心排名架构是什么？",
+    "type": "factual",
+    "trap_type": "bm25_friendly",
+    "expected_sources": ["2004.12832v2.pdf"],
+    "answer_hint": "晚期交互(Late Interaction)架构",
+    "notes": "ColBERT + late interaction 独有词"
+  },
+  {
+    "id": "q04",
+    "question": "在BEIR基准的零样本评估中,重排序和延迟交互模型相比密集/稀疏检索模型在性能和计算成本上呈现怎样的权衡？",
+    "type": "method",
+    "trap_type": "hybrid",
+    "expected_sources": ["2104.08663v4.pdf"],
+    "answer_hint": "重排序和延迟交互平均零样本性能最好但计算成本高;密集/稀疏检索高效但性能较低",
+    "notes": "BEIR 关键词 + trade-off 需要语义理解"
+  },
+  {
+    "id": "q05",
+    "question": "ColBERTv2 通过哪两种策略同时提升了检索质量和减小了空间占用？",
+    "type": "method",
+    "trap_type": "bm25_friendly",
+    "expected_sources": ["2112.01488v3.pdf"],
+    "answer_hint": "采用激进的残差压缩机制和去噪监督策略",
+    "notes": "ColBERTv2 + 残差压缩 + 去噪监督 多个独有词"
+  },
+  {
+    "id": "q06",
+    "question": "Atlas 模型如何在少样本场景下有效学习知识密集型任务？",
+    "type": "method",
+    "trap_type": "hybrid",
+    "expected_sources": ["2208.03299v3.pdf"],
+    "answer_hint": "通过精心设计和预训练的检索增强语言模型,利用文档索引内容并易于更新",
+    "notes": "Atlas 关键词 + few-shot 机制语义"
+  },
+  {
+    "id": "q07",
+    "question": "E5模型在训练时使用了哪个大规模文本对数据集？",
+    "type": "factual",
+    "trap_type": "hybrid",
+    "expected_sources": ["2212.03533v2.pdf"],
+    "answer_hint": "CCPairs(从网络收集的弱监督文本对数据集)",
+    "notes": "E5 + CCPairs 独有词"
+  },
+  {
+    "id": "q08",
+    "question": "HyDE方法包含哪两个核心步骤？",
+    "type": "factual",
+    "trap_type": "bm25_friendly",
+    "expected_sources": ["2212.10496v1.pdf"],
+    "answer_hint": "第一步用指令跟随语言模型生成假设文档,第二步用无监督对比学习编码器编码并检索",
+    "notes": "HyDE 独有词"
+  },
+  {
+    "id": "q09",
+    "question": "REPLUG 如何利用语言模型来改进检索模型的性能？",
+    "type": "method",
+    "trap_type": "vector_friendly",
+    "expected_sources": ["2301.12652v4.pdf"],
+    "answer_hint": "使用语言模型作为监督信号来训练检索模型,使其能检索到更有助于语言模型预测的文档",
+    "notes": "REPLUG 独有词但核心 '用 LM 监督 retriever' 是抽象语义,BM25 易混淆其他论文"
+  },
+  {
+    "id": "q10",
+    "question": "在FLARE方法中,用于检索外部文档的查询是什么？",
+    "type": "factual",
+    "trap_type": "bm25_friendly",
+    "expected_sources": ["2305.06983v2.pdf"],
+    "answer_hint": "对即将到来的句子的预测(即预测的下一个句子)作为查询",
+    "notes": "FLARE 独有词"
+  },
+  {
+    "id": "q11",
+    "question": "研究发现语言模型在长上下文输入中,性能表现与相关信息位置呈现何种关系？",
+    "type": "factual",
+    "trap_type": "vector_friendly",
+    "expected_sources": ["2307.03172v3.pdf"],
+    "answer_hint": "相关信息位于开头或结尾时性能最高,位于中间时性能显著下降",
+    "notes": "不含 'Lost in the Middle' 论文关键词,纯语义触发,中英版对应"
+  },
+  {
+    "id": "q12",
+    "question": "根据论文介绍,Ragas框架可以评估RAG管道的哪几个不同维度？",
+    "type": "factual",
+    "trap_type": "bm25_friendly",
+    "expected_sources": ["2309.15217v2.pdf"],
+    "answer_hint": "检索系统识别相关上下文段落的能力、LLM 忠实利用这些段落的能力、生成本身的质量",
+    "notes": "Ragas 独有词"
+  },
+  {
+    "id": "q13",
+    "question": "Self-RAG 框架是如何通过检索和自我反思来提升语言模型生成质量与事实性的？",
+    "type": "method",
+    "trap_type": "hybrid",
+    "expected_sources": ["2310.11511v1.pdf"],
+    "answer_hint": "训练单个语言模型自适应地按需检索,并生成反射令牌来评估检索结果和自身生成内容的质量",
+    "notes": "Self-RAG + reflection tokens 关键词 + 自适应机制语义"
+  },
+  {
+    "id": "q14",
+    "question": "Chain-of-Note 的核心思想是什么？",
+    "type": "factual",
+    "trap_type": "bm25_friendly",
+    "expected_sources": ["2311.09210v2.pdf"],
+    "answer_hint": "为每个检索到的文档生成连续的阅读笔记,评估其与问题的相关性,并整合信息形成最终答案",
+    "notes": "Chain-of-Note 独有词"
+  },
+  {
+    "id": "q15",
+    "question": "ARES 从哪三个维度评估检索增强生成系统？",
+    "type": "factual",
+    "trap_type": "bm25_friendly",
+    "expected_sources": ["2311.09476v2.pdf"],
+    "answer_hint": "上下文相关性、答案忠实性、答案相关性",
+    "notes": "ARES 独有词"
+  },
+  {
+    "id": "q16",
+    "question": "论文是如何比较无监督微调和检索增强生成(RAG)两种方法的,并得出了什么结论？",
+    "type": "method",
+    "trap_type": "vector_friendly",
+    "expected_sources": ["2312.05934v3.pdf"],
+    "answer_hint": "在多种知识密集型任务上评估,RAG 始终优于无监督微调",
+    "notes": "纯语义对比题,无独特词锚定"
+  },
+  {
+    "id": "q17",
+    "question": "CRAG 采用什么算法来处理检索到的文档,从而聚焦关键信息并过滤无关信息？",
+    "type": "method",
+    "trap_type": "bm25_friendly",
+    "expected_sources": ["2401.15884v3.pdf"],
+    "answer_hint": "分解-重组算法,先分解文档再重组,选择性关注关键信息",
+    "notes": "CRAG + 分解-重组 独有词"
+  },
+  {
+    "id": "q18",
+    "question": "RAPTOR方法中的树结构是如何构建的？",
+    "type": "method",
+    "trap_type": "bm25_friendly",
+    "expected_sources": ["2401.18059v1.pdf"],
+    "answer_hint": "通过递归地嵌入、聚类和总结文本块,从底部向上构建具有不同摘要级别的树",
+    "notes": "RAPTOR + 树结构 关键词"
+  },
+  {
+    "id": "q19",
+    "question": "GraphRAG如何处理用户提出的全局性问题并生成最终答案？",
+    "type": "method",
+    "trap_type": "hybrid",
+    "expected_sources": ["2404.16130v2.pdf"],
+    "answer_hint": "每个社区摘要被用来生成部分响应,然后将所有部分响应汇总生成最终响应",
+    "notes": "GraphRAG 关键词 + 社区摘要 + 汇总 机制语义"
+  },
+  {
+    "id": "q20",
+    "question": "LongRAG通过什么方法来减轻传统RAG中检索器的负担？",
+    "type": "method",
+    "trap_type": "hybrid",
+    "expected_sources": ["2406.15319v3.pdf"],
+    "answer_hint": "将文档分组为更长的4K token单元,使单元总数从2200万减少到60万,降低检索器负担",
+    "notes": "LongRAG 关键词 + 4K token 数字 + 减负机制"
+  }
+]

@@ -1,0 +1,542 @@
+[
+  {
+    "question": "By what margin did the BERT-based passage re-ranking system outperform the previous state of the art on the MS MARCO dataset?",
+    "type": "factual",
+    "answer_hint": "27% relative improvement in MRR@10",
+    "expected_sources": [
+      "1901.04085v5.pdf"
+    ],
+    "source_paper": "1901.04085v5.pdf"
+  },
+  {
+    "question": "What core pretrained model is used in the simple re-implementation for query-based passage re-ranking?",
+    "type": "method",
+    "answer_hint": "BERT (Bidirectional Encoder Representations from Transformers)",
+    "expected_sources": [
+      "1901.04085v5.pdf"
+    ],
+    "source_paper": "1901.04085v5.pdf"
+  },
+  {
+    "question": "Across which stages of model usage does REALM incorporate its knowledge retriever?",
+    "type": "factual",
+    "answer_hint": "Pre-training, fine-tuning, and inference.",
+    "expected_sources": [
+      "2002.08909v1.pdf"
+    ],
+    "source_paper": "2002.08909v1.pdf"
+  },
+  {
+    "question": "How does REALM train its knowledge retriever without labeled data?",
+    "type": "method",
+    "answer_hint": "It uses masked language modeling as the learning signal and backpropagates through a retrieval step that considers millions of documents.",
+    "expected_sources": [
+      "2002.08909v1.pdf"
+    ],
+    "source_paper": "2002.08909v1.pdf"
+  },
+  {
+    "question": "What type of architecture does ColBERT use to balance efficiency and effectiveness?",
+    "type": "factual",
+    "answer_hint": "ColBERT uses a late interaction architecture.",
+    "expected_sources": [
+      "2004.12832v2.pdf"
+    ],
+    "source_paper": "2004.12832v2.pdf"
+  },
+  {
+    "question": "How does ColBERT's late interaction mechanism compute relevance between a query and a document?",
+    "type": "method",
+    "answer_hint": "It independently encodes the query and document using BERT, then employs a cheap interaction step to model fine-grained similarity.",
+    "expected_sources": [
+      "2004.12832v2.pdf"
+    ],
+    "source_paper": "2004.12832v2.pdf"
+  },
+  {
+    "question": "Which knowledge-intensive language tasks are covered in the KILT benchmark?",
+    "type": "factual",
+    "answer_hint": "open-domain question answering, fact checking, slot filling, entity linking, and dialogue",
+    "expected_sources": [
+      "2009.02252v4.pdf"
+    ],
+    "source_paper": "2009.02252v4.pdf"
+  },
+  {
+    "question": "How do the authors propose to reduce engineering turnaround for different tasks in KILT?",
+    "type": "method",
+    "answer_hint": "by grounding all tasks in the same snapshot of Wikipedia, allowing reuse of components",
+    "expected_sources": [
+      "2009.02252v4.pdf"
+    ],
+    "source_paper": "2009.02252v4.pdf"
+  },
+  {
+    "question": "How many state-of-the-art retrieval systems were evaluated in the BEIR benchmark?",
+    "type": "factual",
+    "answer_hint": "10 state-of-the-art retrieval systems including lexical, sparse, dense, late-interaction and re-ranking architectures.",
+    "expected_sources": [
+      "2104.08663v4.pdf"
+    ],
+    "source_paper": "2104.08663v4.pdf"
+  },
+  {
+    "question": "What were the observed trade-offs between different types of retrieval models on the BEIR benchmark regarding zero-shot performance and computational cost?",
+    "type": "method",
+    "answer_hint": "Re-ranking and late-interaction models achieve the best zero-shot performances but at high computational costs, while dense and sparse-retrieval models are computationally more efficient but often underperform other approaches.",
+    "expected_sources": [
+      "2104.08663v4.pdf"
+    ],
+    "source_paper": "2104.08663v4.pdf"
+  },
+  {
+    "question": "By what factor does ColBERTv2 reduce the space footprint of late interaction models?",
+    "type": "factual",
+    "answer_hint": "ColBERTv2 reduces the space footprint by 6–10×.",
+    "expected_sources": [
+      "2112.01488v3.pdf"
+    ],
+    "source_paper": "2112.01488v3.pdf"
+  },
+  {
+    "question": "What mechanisms does ColBERTv2 employ to reduce the space footprint of late interaction while improving quality?",
+    "type": "method",
+    "answer_hint": "ColBERTv2 couples an aggressive residual compression mechanism with a denoised supervision strategy.",
+    "expected_sources": [
+      "2112.01488v3.pdf"
+    ],
+    "source_paper": "2112.01488v3.pdf"
+  },
+  {
+    "question": "On how many of the 15 BEIR datasets did the unsupervised model outperform BM25 in terms of Recall@100?",
+    "type": "factual",
+    "answer_hint": "11 out of 15 datasets",
+    "expected_sources": [
+      "2112.09118v4.pdf"
+    ],
+    "source_paper": "2112.09118v4.pdf"
+  },
+  {
+    "question": "What learning approach is used to train the unsupervised dense retriever in this paper?",
+    "type": "method",
+    "answer_hint": "Contrastive learning",
+    "expected_sources": [
+      "2112.09118v4.pdf"
+    ],
+    "source_paper": "2112.09118v4.pdf"
+  },
+  {
+    "question": "On closed and specialized target domains (e.g., COVID-19), how does the Dense Passage Retriever (DPR) compare to the BM25 retrieval model?",
+    "type": "factual",
+    "answer_hint": "DPR lags behind standard BM25 in this out-of-domain setting.",
+    "expected_sources": [
+      "2204.09248v1.pdf"
+    ],
+    "source_paper": "2204.09248v1.pdf"
+  },
+  {
+    "question": "What technique do the authors use to improve the robustness of Dense Passage Retriever (DPR) when applied to a different target domain?",
+    "type": "method",
+    "answer_hint": "They fine-tune DPR using synthetic training examples generated from unlabeled target domain text via a text-to-text generator.",
+    "expected_sources": [
+      "2204.09248v1.pdf"
+    ],
+    "source_paper": "2204.09248v1.pdf"
+  },
+  {
+    "question": "What accuracy does Atlas achieve on Natural Questions with only 64 training examples?",
+    "type": "factual",
+    "answer_hint": "Over 42% accuracy, outperforming a 540B parameter model by 3% despite having 50x fewer parameters.",
+    "expected_sources": [
+      "2208.03299v3.pdf"
+    ],
+    "source_paper": "2208.03299v3.pdf"
+  },
+  {
+    "question": "How does Atlas enable few-shot learning on knowledge-intensive tasks without requiring massive parameter counts?",
+    "type": "method",
+    "answer_hint": "It is a carefully designed and pre-trained retrieval augmented language model that uses an updatable document index to store knowledge externally, allowing strong performance with very few training examples and far fewer parameters.",
+    "expected_sources": [
+      "2208.03299v3.pdf"
+    ],
+    "source_paper": "2208.03299v3.pdf"
+  },
+  {
+    "question": "How many embedding tasks are included in the MTEB benchmark?",
+    "type": "factual",
+    "answer_hint": "8 embedding tasks",
+    "expected_sources": [
+      "2210.07316v3.pdf"
+    ],
+    "source_paper": "2210.07316v3.pdf"
+  },
+  {
+    "question": "What approach does MTEB take to evaluate the performance of text embedding models across diverse applications?",
+    "type": "method",
+    "answer_hint": "MTEB spans 8 embedding tasks covering 58 datasets and 112 languages, and benchmarks 33 models to comprehensively evaluate text embeddings.",
+    "expected_sources": [
+      "2210.07316v3.pdf"
+    ],
+    "source_paper": "2210.07316v3.pdf"
+  },
+  {
+    "question": "What is the name of the model family presented in the paper?",
+    "type": "factual",
+    "answer_hint": "E5, a family of state-of-the-art text embeddings.",
+    "expected_sources": [
+      "2212.03533v2.pdf"
+    ],
+    "source_paper": "2212.03533v2.pdf"
+  },
+  {
+    "question": "How does E5 learn its text embeddings during training?",
+    "type": "method",
+    "answer_hint": "E5 is trained in a contrastive manner with weak supervision signals from the curated CCPairs dataset.",
+    "expected_sources": [
+      "2212.03533v2.pdf"
+    ],
+    "source_paper": "2212.03533v2.pdf"
+  },
+  {
+    "question": "What does HyDE generate from a query before encoding it for retrieval?",
+    "type": "factual",
+    "answer_hint": "A hypothetical document generated by an instruction-following language model.",
+    "expected_sources": [
+      "2212.10496v1.pdf"
+    ],
+    "source_paper": "2212.10496v1.pdf"
+  },
+  {
+    "question": "How does HyDE retrieve relevant documents without using any relevance labels?",
+    "type": "method",
+    "answer_hint": "HyDE first instructs an LM to generate a hypothetical document for the query, then encodes it with an unsupervised contrastive encoder, and retrieves real documents by vector similarity to that embedding.",
+    "expected_sources": [
+      "2212.10496v1.pdf"
+    ],
+    "source_paper": "2212.10496v1.pdf"
+  },
+  {
+    "question": "What distinguishes REPLUG from prior retrieval-augmented language models in terms of how retrieved text is incorporated?",
+    "type": "factual",
+    "answer_hint": "Prior models train language models with cross attention mechanisms to encode retrieved text, whereas REPLUG simply prepends retrieved documents to the input of the frozen black-box LM.",
+    "expected_sources": [
+      "2301.12652v4.pdf"
+    ],
+    "source_paper": "2301.12652v4.pdf"
+  },
+  {
+    "question": "How does REPLUG leverage the language model to improve the retrieval model?",
+    "type": "method",
+    "answer_hint": "The language model is used to supervise the retrieval model, enabling it to find documents that help the LM make better predictions.",
+    "expected_sources": [
+      "2301.12652v4.pdf"
+    ],
+    "source_paper": "2301.12652v4.pdf"
+  },
+  {
+    "question": "What are the formats of multimodal knowledge that can be retrieved to augment generative models according to the survey?",
+    "type": "factual",
+    "answer_hint": "images, codes, tables, graphs, audio",
+    "expected_sources": [
+      "2303.10868v3.pdf"
+    ],
+    "source_paper": "2303.10868v3.pdf"
+  },
+  {
+    "question": "How does the survey propose to address concerns such as factuality and reasoning in large language models?",
+    "type": "method",
+    "answer_hint": "by retrieving multimodal knowledge (e.g., images, codes, tables, graphs, audio) to augment the generation process",
+    "expected_sources": [
+      "2303.10868v3.pdf"
+    ],
+    "source_paper": "2303.10868v3.pdf"
+  },
+  {
+    "question": "What new test set did the authors create to evaluate the ranking ability of LLMs on unseen knowledge?",
+    "type": "factual",
+    "answer_hint": "NovelEval, a test set based on the latest knowledge to verify model's ability to rank unknown knowledge.",
+    "expected_sources": [
+      "2304.09542v3.pdf"
+    ],
+    "source_paper": "2304.09542v3.pdf"
+  },
+  {
+    "question": "How did the authors distill the ranking capability of ChatGPT into a smaller, specialized model?",
+    "type": "method",
+    "answer_hint": "Using a permutation distillation scheme.",
+    "expected_sources": [
+      "2304.09542v3.pdf"
+    ],
+    "source_paper": "2304.09542v3.pdf"
+  },
+  {
+    "question": "What does FLARE stand for and what is its core operational principle?",
+    "type": "factual",
+    "answer_hint": "FLARE stands for Forward-Looking Active REtrieval augmented generation; it iteratively uses a prediction of the upcoming sentence to anticipate future content, then retrieves relevant documents to regenerate the sentence if it contains low-confidence tokens.",
+    "expected_sources": [
+      "2305.06983v2.pdf"
+    ],
+    "source_paper": "2305.06983v2.pdf"
+  },
+  {
+    "question": "How does FLARE determine when to trigger retrieval during text generation?",
+    "type": "method",
+    "answer_hint": "FLARE monitors token-level confidence; when low-confidence tokens are detected in the predicted sentence, it retrieves relevant documents and regenerates that sentence using the retrieved context.",
+    "expected_sources": [
+      "2305.06983v2.pdf"
+    ],
+    "source_paper": "2305.06983v2.pdf"
+  },
+  {
+    "question": "What pattern did the authors observe regarding the position of relevant information in long input contexts and model performance?",
+    "type": "factual",
+    "answer_hint": "Performance is highest when relevant information appears at the beginning or end of the input context, and significantly degrades when it is in the middle.",
+    "expected_sources": [
+      "2307.03172v3.pdf"
+    ],
+    "source_paper": "2307.03172v3.pdf"
+  },
+  {
+    "question": "What tasks did the authors use to study how language models handle long contexts?",
+    "type": "method",
+    "answer_hint": "Multi-document question answering and key-value retrieval.",
+    "expected_sources": [
+      "2307.03172v3.pdf"
+    ],
+    "source_paper": "2307.03172v3.pdf"
+  },
+  {
+    "question": "How many tasks and datasets are included in the C-MTEB benchmark for Chinese text embeddings?",
+    "type": "factual",
+    "answer_hint": "C-MTEB covers 6 tasks and 35 datasets.",
+    "expected_sources": [
+      "2309.07597v5.pdf"
+    ],
+    "source_paper": "2309.07597v5.pdf"
+  },
+  {
+    "question": "How is the C-MTP training dataset for text embeddings constructed?",
+    "type": "method",
+    "answer_hint": "It is based on the curation of vast unlabeled corpora and the integration of high-quality labeled corpora.",
+    "expected_sources": [
+      "2309.07597v5.pdf"
+    ],
+    "source_paper": "2309.07597v5.pdf"
+  },
+  {
+    "question": "What is Ragas and what is its primary purpose?",
+    "type": "factual",
+    "answer_hint": "Ragas is a framework for reference-free evaluation of Retrieval Augmented Generation (RAG) pipelines, aimed at enabling faster evaluation cycles without relying on ground truth human annotations.",
+    "expected_sources": [
+      "2309.15217v2.pdf"
+    ],
+    "source_paper": "2309.15217v2.pdf"
+  },
+  {
+    "question": "How does Ragas evaluate the different dimensions of a RAG pipeline?",
+    "type": "method",
+    "answer_hint": "Ragas uses a suite of metrics that assess the retrieval system's ability to identify relevant context, the LLM's faithful use of those passages, and the overall quality of the generated response, all without requiring human-annotated ground truth.",
+    "expected_sources": [
+      "2309.15217v2.pdf"
+    ],
+    "source_paper": "2309.15217v2.pdf"
+  },
+  {
+    "question": "What are the two distinct fine-tuning steps in the RA-DIT methodology?",
+    "type": "factual",
+    "answer_hint": "Step (1) updates a pre-trained LM to better use retrieved information; step (2) updates the retriever to return more relevant results as preferred by the LM.",
+    "expected_sources": [
+      "2310.01352v4.pdf"
+    ],
+    "source_paper": "2310.01352v4.pdf"
+  },
+  {
+    "question": "How does RA-DIT integrate retrieval capabilities into an existing large language model?",
+    "type": "method",
+    "answer_hint": "It uses a two-step fine-tuning procedure: first fine-tuning the LM to effectively utilize retrieved information, then fine-tuning the retriever to produce results that the LM finds more relevant, with both stages applied to tasks requiring knowledge and context.",
+    "expected_sources": [
+      "2310.01352v4.pdf"
+    ],
+    "source_paper": "2310.01352v4.pdf"
+  },
+  {
+    "question": "What is the purpose of reflection tokens in the SELF-RAG framework?",
+    "type": "factual",
+    "answer_hint": "Reflection tokens make the LM controllable during the inference phase, enabling it to tailor behavior to different task requirements.",
+    "expected_sources": [
+      "2310.11511v1.pdf"
+    ],
+    "source_paper": "2310.11511v1.pdf"
+  },
+  {
+    "question": "How does SELF-RAG determine whether to retrieve external information when generating a response?",
+    "type": "method",
+    "answer_hint": "SELF-RAG trains a single arbitrary LM to adaptively retrieve passages on-demand, using reflection tokens to decide when retrieval is necessary.",
+    "expected_sources": [
+      "2310.11511v1.pdf"
+    ],
+    "source_paper": "2310.11511v1.pdf"
+  },
+  {
+    "question": "What is the core idea behind the Chain-of-Note approach?",
+    "type": "factual",
+    "answer_hint": "Generating sequential reading notes for each retrieved document to evaluate relevance and integrate information for the final answer.",
+    "expected_sources": [
+      "2311.09210v2.pdf"
+    ],
+    "source_paper": "2311.09210v2.pdf"
+  },
+  {
+    "question": "How does Chain-of-Note improve the robustness of retrieval-augmented language models when dealing with irrelevant documents?",
+    "type": "method",
+    "answer_hint": "It generates sequential reading notes for each retrieved document, enabling thorough evaluation of their relevance to the question, then integrates this information to formulate the final answer.",
+    "expected_sources": [
+      "2311.09210v2.pdf"
+    ],
+    "source_paper": "2311.09210v2.pdf"
+  },
+  {
+    "question": "What are the three evaluation dimensions that ARES assesses in RAG systems?",
+    "type": "factual",
+    "answer_hint": "Context relevance, answer faithfulness, and answer relevance.",
+    "expected_sources": [
+      "2311.09476v2.pdf"
+    ],
+    "source_paper": "2311.09476v2.pdf"
+  },
+  {
+    "question": "How does ARES reduce the risk of prediction errors when evaluating RAG components?",
+    "type": "method",
+    "answer_hint": "It uses a small set of human-annotated datapoints for prediction-powered inference (PPI).",
+    "expected_sources": [
+      "2311.09476v2.pdf"
+    ],
+    "source_paper": "2311.09476v2.pdf"
+  },
+  {
+    "question": "According to the study, which approach—unsupervised fine-tuning or retrieval-augmented generation—performs better for knowledge injection?",
+    "type": "factual",
+    "answer_hint": "RAG consistently outperforms unsupervised fine-tuning for both existing and new knowledge.",
+    "expected_sources": [
+      "2312.05934v3.pdf"
+    ],
+    "source_paper": "2312.05934v3.pdf"
+  },
+  {
+    "question": "How did the researchers compare unsupervised fine-tuning and RAG in their study?",
+    "type": "method",
+    "answer_hint": "They evaluated both approaches on a variety of knowledge-intensive tasks across different topics.",
+    "expected_sources": [
+      "2312.05934v3.pdf"
+    ],
+    "source_paper": "2312.05934v3.pdf"
+  },
+  {
+    "question": "What does the lightweight retrieval evaluator in CRAG return to decide which retrieval actions to take?",
+    "type": "factual",
+    "answer_hint": "It returns a confidence degree based on the assessed quality of retrieved documents for a query.",
+    "expected_sources": [
+      "2401.15884v3.pdf"
+    ],
+    "source_paper": "2401.15884v3.pdf"
+  },
+  {
+    "question": "How does CRAG handle suboptimal retrieved documents from static corpora to improve generation robustness?",
+    "type": "method",
+    "answer_hint": "It uses large-scale web searches as an extension and applies a decompose-then-recompose algorithm to selectively focus on key information and filter out irrelevant content.",
+    "expected_sources": [
+      "2401.15884v3.pdf"
+    ],
+    "source_paper": "2401.15884v3.pdf"
+  },
+  {
+    "question": "What are the four types of RAG applications defined in CRUD-RAG?",
+    "type": "factual",
+    "answer_hint": "Create, Read, Update, and Delete (CRUD)",
+    "expected_sources": [
+      "2401.17043v3.pdf"
+    ],
+    "source_paper": "2401.17043v3.pdf"
+  },
+  {
+    "question": "How does CRUD-RAG differ from existing benchmarks in evaluating RAG systems?",
+    "type": "method",
+    "answer_hint": "It evaluates all components of the RAG pipeline across various application scenarios, including non-knowledge-intensive ones, using CRUD categories instead of focusing only on QA or retriever/LLM components.",
+    "expected_sources": [
+      "2401.17043v3.pdf"
+    ],
+    "source_paper": "2401.17043v3.pdf"
+  },
+  {
+    "question": "What does the acronym RAPTOR stand for?",
+    "type": "factual",
+    "answer_hint": "Recursive Abstractive Processing for Tree-Organized Retrieval",
+    "expected_sources": [
+      "2401.18059v1.pdf"
+    ],
+    "source_paper": "2401.18059v1.pdf"
+  },
+  {
+    "question": "How does RAPTOR build its hierarchical retrieval structure?",
+    "type": "method",
+    "answer_hint": "Recursively embedding, clustering, and summarizing chunks of text to construct a tree from the bottom up with varying levels of summarization.",
+    "expected_sources": [
+      "2401.18059v1.pdf"
+    ],
+    "source_paper": "2401.18059v1.pdf"
+  },
+  {
+    "question": "What are the two main stages of building the graph index in GraphRAG?",
+    "type": "factual",
+    "answer_hint": "First, derive an entity knowledge graph from the source documents; then, pre-generate community summaries for groups of closely related entities.",
+    "expected_sources": [
+      "2404.16130v2.pdf"
+    ],
+    "source_paper": "2404.16130v2.pdf"
+  },
+  {
+    "question": "How does GraphRAG produce a final answer for a user query?",
+    "type": "method",
+    "answer_hint": "Each community summary is used to generate a partial response, then all partial responses are summarized into a final response.",
+    "expected_sources": [
+      "2404.16130v2.pdf"
+    ],
+    "source_paper": "2404.16130v2.pdf"
+  },
+  {
+    "question": "What is the token-length of the retrieval units used by LongRAG when processing Wikipedia-based datasets?",
+    "type": "factual",
+    "answer_hint": "4K tokens",
+    "expected_sources": [
+      "2406.15319v3.pdf"
+    ],
+    "source_paper": "2406.15319v3.pdf"
+  },
+  {
+    "question": "How does LongRAG modify the traditional RAG framework to improve retrieval and reading?",
+    "type": "method",
+    "answer_hint": "It uses a 'long retriever' that groups related documents into 4K-token units (30 times longer), reducing total units from 22M to 600K, then feeds retrieved units (~30K tokens) to a long-context LLM for zero-shot answer generation.",
+    "expected_sources": [
+      "2406.15319v3.pdf"
+    ],
+    "source_paper": "2406.15319v3.pdf"
+  },
+  {
+    "question": "What capabilities does LR-Robot provide for analyzing literature beyond simple categorization?",
+    "type": "factual",
+    "answer_hint": "It enables multidimensional categorization, maps relationships among papers, identifies high-impact works, and supports historical, fine-grained analyses of topic evolution.",
+    "expected_sources": [
+      "2603.17723v1.pdf"
+    ],
+    "source_paper": "2603.17723v1.pdf"
+  },
+  {
+    "question": "How does LR-Robot incorporate expert supervision to ensure the quality of the literature review process?",
+    "type": "method",
+    "answer_hint": "It employs a human-in-the-loop process to define sub-SLR tasks, evaluate models, and ensure methodological rigor, while leveraging structured knowledge sources and retrieval-augmented generation.",
+    "expected_sources": [
+      "2603.17723v1.pdf"
+    ],
+    "source_paper": "2603.17723v1.pdf"
+  }
+]
