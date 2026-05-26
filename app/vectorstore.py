@@ -8,6 +8,13 @@ from pathlib import Path
 from typing import List, Optional
 
 from dotenv import load_dotenv
+
+# 必须在 import sentence_transformers / transformers 之前设置 HF 镜像
+# 否则模型下载会走默认 huggingface.co,在国内可能连不上
+load_dotenv()
+if os.getenv("HF_ENDPOINT"):
+    os.environ["HF_ENDPOINT"] = os.getenv("HF_ENDPOINT")
+
 from langchain_community.vectorstores import Chroma
 from langchain_core.documents import Document
 from langchain_core.embeddings import Embeddings

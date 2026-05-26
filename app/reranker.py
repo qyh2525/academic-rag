@@ -11,10 +11,14 @@ import os
 from typing import List, Optional, Tuple
 
 from dotenv import load_dotenv
+
+# HF 镜像必须在 import sentence_transformers 之前生效
+load_dotenv()
+if os.getenv("HF_ENDPOINT"):
+    os.environ["HF_ENDPOINT"] = os.getenv("HF_ENDPOINT")
+
 from langchain_core.documents import Document
 from sentence_transformers import CrossEncoder
-
-load_dotenv()
 
 
 _reranker: Optional[CrossEncoder] = None
