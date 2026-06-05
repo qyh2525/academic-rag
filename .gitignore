@@ -7,6 +7,5 @@ __pycache__/
 .vscode/
 .claude/
 data/chroma/
-docs/
 *.log
 .DS_Store
