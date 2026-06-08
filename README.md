@@ -1,3 +1,16 @@
+---
+title: Academic RAG
+emoji: 📚
+colorFrom: indigo
+colorTo: purple
+sdk: streamlit
+sdk_version: 1.39.0
+app_file: main.py
+pinned: false
+license: mit
+short_description: 学术论文 RAG 问答:混合检索 + Cross-encoder 精排
+---
+
 # 学术论文 RAG 智能问答助手
 
 基于 RAG (Retrieval-Augmented Generation) 的学术论文问答系统:上传 PDF,自然语言提问,返回带引用来源的答案。**两阶段检索 + Cross-encoder 精排**,流式输出。
